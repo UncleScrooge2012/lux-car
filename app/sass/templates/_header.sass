@@ -59,13 +59,22 @@
     
     &::after
       bottom: 0
+    &.active::after
+      bottom: 50%
+      transform: rotate(45deg ) translate(0px, 50%)
     
     &::before
       top: 0
+    &.active::before
+      top: 50%
+      transform: rotate(-45deg ) translate(0px, -50%)
 
     & span
       top: 50% 
       transform: scale(1) translate(0px, -50%)
+    &.active span
+      transform: scale(0) translate(0px, -50%)
+
 
   .menu__body
     position: fixed
